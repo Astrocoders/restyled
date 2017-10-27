@@ -1,0 +1,13 @@
+{
+  "name": "bs-restyled",
+  "reason": {
+    "react-jsx": 2
+  },
+  "bs-dependencies": ["reason-react", "bs-react-native"],
+  "bsc-flags": ["-bs-super-errors"],
+  "sources": [
+    {
+      "dir": "re"
+    }
+  ]
+}
