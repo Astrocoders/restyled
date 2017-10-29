@@ -1,7 +1,7 @@
 # bs-restyled
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/Astrocoders/bs-restyled.svg)](https://greenkeeper.io/)
-[![Build Status](https://travis-ci.org/Astrocoders/bs-restyled.svg?branch=master)](https://travis-ci.org/Astrocoders/bs-restyled)
+[![Greenkeeper badge](https://badges.greenkeeper.io/Astrocoders/restyled.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/Astrocoders/restyled.svg?branch=master)](https://travis-ci.org/Astrocoders/restyled)
 
 Styled Components concept for Reason
 
