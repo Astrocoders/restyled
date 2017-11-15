@@ -6,13 +6,13 @@ asap@~2.0.3:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
 
-bs-platform@^2.0.0:
+bs-platform@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-2.0.0.tgz#17ee607fa829f67b8b920438ebca5ec1deab3276"
 
-bs-react-native@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/bs-react-native/-/bs-react-native-0.2.1.tgz#73b98474747d803951b18cb21df817855b01fc70"
+bs-react-native@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/bs-react-native/-/bs-react-native-0.3.0.tgz#190a10d852202f02f7049aa361a948e83a332918"
   dependencies:
     reason-react "^0.2.4"
 
