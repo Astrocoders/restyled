@@ -44,7 +44,7 @@ let make (_children) => {
 }
 ```
 
-Take a look in the [REStyled.re](https://github.com/Astrocoders/restyled) for more
+Take a look in the [REStyled.re](https://github.com/Astrocoders/restyled/blob/master/re/REStyled.re) for more
 
 ### Acknowledgments
 
