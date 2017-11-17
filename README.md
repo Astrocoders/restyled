@@ -35,7 +35,7 @@ module Wrapper = Styled.View {
 
 let component = ReasonReact.statelessComponent("MyView");
 
-let make (_children) => {
+let make = (_children) => {
   ...component,
   render: (_self) =>
     <Wrapper>
