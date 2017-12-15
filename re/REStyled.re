@@ -1,4 +1,4 @@
-open ReactNative;
+open BsReactNative;
 
 let get = (arg, default) =>
   switch arg {
@@ -8,21 +8,6 @@ let get = (arg, default) =>
 
 module type StyledConfig = {type styleParams; let style: option(styleParams) => Style.t;};
 
-/* TODO Use a module functor later to reuse the module creation */
-/* module Create (Component: { */
-/*   type params; */
-/*   let make: style::Style.t? => params; */
-/* }) => { */
-/*   module Styled (Config: StyledConfig) => { */
-/*     let make ::styled=? style::additionalStyle=? => */
-/*       Component.make */
-/*         style::( */
-/*           Style.combine */
-/*             (Config.style styled) */
-/*             (Utils.get additionalStyle Style.(style [])) */
-/*         ); */
-/*   }; */
-/* }; */
 module View = (Config: StyledConfig) => {
   let make = (~styled=?, ~style as additionalStyle=Style.(style([]))) =>
     View.make(~style=Style.combine(Config.style(styled), additionalStyle));
