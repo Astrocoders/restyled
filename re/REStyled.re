@@ -8,23 +8,23 @@ let get = (arg, default) =>
 
 module type StyledConfig = {type styleParams; let style: option(styleParams) => Style.t;};
 
+module type Element {
+  let make: (~style: Style.t) => 'a;
+};
+
+module Styled = (Element: Element, Config: StyledConfig) => {
+  let make = (~styled=?, ~style as additionalStyle=Style.(style([]))) =>
+    Element.make(~style=Style.combine(Config.style(styled), additionalStyle));
+};
+
 module View = (Config: StyledConfig) => {
   let make = (~styled=?, ~style as additionalStyle=Style.(style([]))) =>
     View.make(~style=Style.combine(Config.style(styled), additionalStyle));
 };
 
-module Text =
-       (
-         Config: {
-           type styleParams;
-           let defaultParams: styleParams;
-           let style: (~params: styleParams) => Style.t;
-         }
-       ) => {
-  let make = (~styled=?, ~style as additionalStyle=Style.(style([]))) => {
-    let params = get(styled, Config.defaultParams);
-    Text.make(~style=Style.combine(Config.style(~params), additionalStyle))
-  };
+module Text = (Config: StyledConfig) => {
+  let make = (~styled=?, ~style as additionalStyle=Style.(style([]))) =>
+    Text.make(~style=Style.combine(Config.style(styled), additionalStyle));
 };
 
 module ScrollView = (Config: StyledConfig) => {
@@ -36,19 +36,9 @@ module TouchableOpacity = (Config: StyledConfig) => {
   let make = (~styled=?, ~style as additionalStyle=Style.(style([]))) =>
     TouchableOpacity.make(~style=Style.combine(Config.style(styled), additionalStyle));
 };
-
 module TextInput = (Config: StyledConfig) => {
   let make = (~styled=?, ~style as additionalStyle=Style.(style([]))) =>
-    TextInput.make(
-      ~style=
-        Style.combine(
-          switch styled {
-          | Some(params) => Config.style(params)
-          | None => Style.style([])
-          },
-          additionalStyle
-        )
-    );
+    TextInput.make(~style=Style.combine(Config.style(styled), additionalStyle));
 };
 
 module Image = (Config: StyledConfig) => {
