@@ -3,7 +3,16 @@
   "version": "1.0.0",
   "description": "Boilerplate for BuckleScript NPM package",
   "main": "lib/js/re/REStyled.js",
-  "repository": "git@github.com:Astrocoders/bs-restyled.git",
+  "repository": "git@github.com:Astrocoders/restyled.git",
+  "homepage": "https://github.com/Astrocoders/restyled#readme",
+  "bugs": "https://github.com/Astrocoders/restyled/issues",
+  "keywords": [
+    "reason",
+    "bucklescript",
+    "react",
+    "css",
+    "css-in-js"
+  ],
   "author": "Gabriel R. Abreu <grsabreu@gmail.com>",
   "license": "MIT",
   "dependencies": {
