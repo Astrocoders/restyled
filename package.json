@@ -1,6 +1,6 @@
 {
   "name": "bs-restyled",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Boilerplate for BuckleScript NPM package",
   "main": "lib/js/re/REStyled.js",
   "repository": "git@github.com:Astrocoders/restyled.git",
