@@ -7,7 +7,7 @@ Styled Components concept for Reason
 
 ## Install
 
-* `yarn add bs-styled`
+* `yarn add bs-restyled`
 * Then add it to your bs-dependencies
 
 ```js
